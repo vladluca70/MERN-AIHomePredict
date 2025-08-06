@@ -16,7 +16,7 @@ function AuthPage({succesfulLoginOrRegister})
     }
 
     async function handleRegisterType() {
-        await handleRequest('register')
+        await handleRequest('signup')
     }
 
     async function handleRequest(requestType) {
@@ -47,7 +47,7 @@ function AuthPage({succesfulLoginOrRegister})
         <>
             <input onChange={(e)=>handleUsernameChange(e)}/>
             <input onChange={(e)=>handlePasswordChange(e)}/>
-            <button onClick={handleRegisterType}>Register</button>
+            <button onClick={handleRegisterType}>Sign Up</button>
             {errorMessage && <p>{errorMessage}</p>}
         </>
     )

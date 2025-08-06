@@ -1,10 +1,11 @@
 import { useState } from "react"
 
 
-function AuthPage()
+function AuthPage({succesfulLoginOrRegister})
 {
     const [username, setUsername]=useState('')
     const [password, setPassword]=useState('')
+    const [errorMessage, setErrorMessage]=useState('')
 
     function handleUsernameChange(e){
         setUsername(e.target.value)
@@ -19,7 +20,27 @@ function AuthPage()
     }
 
     async function handleRequest(requestType) {
-        
+        const url=`http://localhost:5000/${requestType}`
+
+        try {
+            const response = await fetch(url, {
+            method:'POST',
+            headers:{'Content-Type':"application/json"},
+            body:JSON.stringify({username:username, password:password})
+        });
+
+        const responseData=await response.json()
+        if(response.ok){
+            setErrorMessage('')
+            succesfulLoginOrRegister(username)
+        }
+        else{
+            setErrorMessage(responseData.message)
+        }   
+
+        } catch (error) {
+           console.error("errors", error) 
+        }
     }
 
     return(
@@ -27,6 +48,7 @@ function AuthPage()
             <input onChange={(e)=>handleUsernameChange(e)}/>
             <input onChange={(e)=>handlePasswordChange(e)}/>
             <button onClick={handleRegisterType}>Register</button>
+            {errorMessage && <p>{errorMessage}</p>}
         </>
     )
 }

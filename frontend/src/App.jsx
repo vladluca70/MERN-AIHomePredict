@@ -18,7 +18,7 @@ function App() {
   else{
     return (
       <>
-        <AuthPage usernameFunction={handleUsername}/>
+        <AuthPage succesfulLoginOrRegister={handleUsername}/>
       </>
     )
   }

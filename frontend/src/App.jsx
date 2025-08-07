@@ -10,10 +10,14 @@ function App() {
     setUsername(name)
   }
 
+  function handleLogOut(){
+    setUsername('')
+  }
+
   if (username){
     return (
       <>
-        <PredictPricePage username={username} />
+        <PredictPricePage username={username} logOutButton={handleLogOut}/>
       </>
     )
   }

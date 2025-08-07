@@ -1,5 +1,5 @@
 import { useState } from "react"
-
+import './StylePage.css'
 
 function AuthPage({succesfulLoginOrRegister})
 {
@@ -49,8 +49,8 @@ function AuthPage({succesfulLoginOrRegister})
 
     return(
         <>
-            <input type="text" onChange={(e)=>handleUsernameChange(e)}/>
-            <input type="password" onChange={(e)=>handlePasswordChange(e)}/>
+            <input placeholder="Username" type="text" onChange={(e)=>handleUsernameChange(e)}/>
+            <input placeholder="Password" type="password" onChange={(e)=>handlePasswordChange(e)}/>
             <button onClick={handleLoginType}>Log in</button>
             <button onClick={handleRegisterType}>Sign Up</button>
             {errorMessage && <p>{errorMessage}</p>}

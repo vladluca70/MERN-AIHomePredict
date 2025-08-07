@@ -13,7 +13,7 @@ function App() {
   if (username){
     return (
       <>
-        <PredictPricePage username={username}/>
+        <PredictPricePage username={username} />
       </>
     )
   }

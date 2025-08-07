@@ -1,5 +1,5 @@
 import { useState } from "react"
-
+import './StylePage.css'
 
 function PredictPricePage({username})
 {
@@ -107,8 +107,8 @@ function PredictPricePage({username})
         Year property was last renovated: <input type="number" onChange={(e)=>handleYearPropertyWasLastRenovated(e)} placeholder="A number between 0 and 5" required/> <br/>
 
         <button onClick={sendAllDataFunction}>Send data</button> <br/>
-        {errorMessage && <p>{errorMessage}</p>}
-        {predictedPrice &&<p>{predictedPrice}</p>}
+        {errorMessage && <p>{errorMessage}</p>} <br/>
+        {predictedPrice &&<p>Predictedd price: {predictedPrice}</p>}
         </>
     )
 }

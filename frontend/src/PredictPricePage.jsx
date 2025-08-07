@@ -103,8 +103,8 @@ function PredictPricePage({username, logOutButton})
         Indicates if property has waterfront view: <input type="number" onChange={(e)=>handleHasWaterFrontView(e)} placeholder="0 for no, 1 for yes" required/><br/>
         Quality level of property view: <input type="number" onChange={(e)=>handleQualityLevelOfPropertyView(e)} placeholder="A number between 0 and 5" required/> <br/>
         Overall condition rating: <input type="number" onChange={(e)=>handleOverallConditionRating(e)} placeholder="A number between 0 and 5" required/> <br/>
-        Year property was built: <input type="number" onChange={(e)=>handleYearPropertyWasBuilt(e)} placeholder="A number between 0 and 5" required/> <br/>
-        Year property was last renovated: <input type="number" onChange={(e)=>handleYearPropertyWasLastRenovated(e)} placeholder="A number between 0 and 5" required/> <br/>
+        Year property was built: <input type="number" onChange={(e)=>handleYearPropertyWasBuilt(e)} placeholder="A number between 1900 and 2025" required/> <br/>
+        Year property was last renovated: <input type="number" onChange={(e)=>handleYearPropertyWasLastRenovated(e)} placeholder="A number between 1900 and 2025, 0 if never" required/> <br/>
 
         <button onClick={sendAllDataFunction}>Send data</button> <br/>
         <button onClick={logOutButton}>Log Out</button>

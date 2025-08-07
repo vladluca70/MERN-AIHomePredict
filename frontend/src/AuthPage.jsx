@@ -19,6 +19,10 @@ function AuthPage({succesfulLoginOrRegister})
         await handleRequest('signup')
     }
 
+    async function handleLoginType() {
+        await handleRequest('login')
+    }
+
     async function handleRequest(requestType) {
         const url=`http://localhost:5000/${requestType}`
 
@@ -45,8 +49,9 @@ function AuthPage({succesfulLoginOrRegister})
 
     return(
         <>
-            <input onChange={(e)=>handleUsernameChange(e)}/>
-            <input onChange={(e)=>handlePasswordChange(e)}/>
+            <input type="text" onChange={(e)=>handleUsernameChange(e)}/>
+            <input type="password" onChange={(e)=>handlePasswordChange(e)}/>
+            <button onClick={handleLoginType}>Log in</button>
             <button onClick={handleRegisterType}>Sign Up</button>
             {errorMessage && <p>{errorMessage}</p>}
         </>

@@ -24,7 +24,7 @@ function AuthPage({succesfulLoginOrRegister})
     }
 
     async function handleRequest(requestType) {
-        const url=`http://localhost:5000/${requestType}`
+        const url=`http://localhost:5002/${requestType}`
 
         try {
             const response = await fetch(url, {

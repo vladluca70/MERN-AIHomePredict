@@ -4,7 +4,7 @@ const mongoose=require('mongoose')
 const bcrypt=require('bcrypt')
 const e = require('express')
 
-const port=5000
+const port=5002
 const server=express()
 const url='mongodb://localhost:27017/home-prediction';
 

@@ -72,4 +72,4 @@ npm run dev
 
 
 📬 **Contact**  
-For questions or suggestions, please reach out at: [your_name@email.com]
+For questions or suggestions, please reach out at: [vladluca70@email.com]

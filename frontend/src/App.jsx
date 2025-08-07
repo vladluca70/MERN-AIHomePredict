@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import WelcomePage from './WelcomePage'
+import PredictPricePage from './PredictPricePage'
 import AuthPage from './AuthPage'
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
   if (username){
     return (
       <>
-        <WelcomePage/>
+        <PredictPricePage username={username}/>
       </>
     )
   }

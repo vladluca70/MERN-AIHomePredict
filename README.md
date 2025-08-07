@@ -1,14 +1,14 @@
 🏠 **House Price Predictor (MERN + Python)**  
 This project is a full-stack web application (MERN stack + Python) designed to predict the price of a house using logistic regression.
 
-🔧 **Technologies Used**  
-**Frontend:** HTML, CSS, React  
-**Backend:** Node.js, Express  
-**Authentication:** bcrypt for password hashing  
-**Machine Learning:** Python, Pandas, scikit-learn (sklearn), Flask  
-**Model Saving/Loading:** joblib  
-**Database:** MongoDB  
-**Others:** CORS, Flask API
+### 🔧 Technologies
+- **Frontend:** React, HTML, CSS  
+- **Backend:** Node.js, Express  
+- **Authentication:** bcrypt (password hashing)  
+- **Machine Learning:** Python, Pandas, scikit-learn, Flask  
+- **Model Management:** joblib (save/load model)  
+- **Database:** MongoDB  
+- **Other:** CORS, Flask API 
 
 🚀 **Key Features**  
 - Create an account with a username and password  
